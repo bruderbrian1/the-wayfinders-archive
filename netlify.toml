@@ -1,6 +1,6 @@
 # Static-only deployment. The optional AI proxy is NOT deployed.
 [build]
-  publish = "files"
+  publish = "."
   command = ""
 
 [[headers]]
@@ -17,11 +17,11 @@
     Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
-  for = "/js/*"
+  for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
-  for = "/css/*"
+  for = "/*.css"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
