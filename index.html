@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wayfinder's Archive — Procedural Journey Tracker</title>
+<meta name="description" content="An immersive procedural exploration and survival intelligence terminal for The Cartographer.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='14' fill='none' stroke='%233ff0d0' stroke-opacity='.6'/%3E%3Cpath d='M20 3 L23 17 L37 20 L23 23 L20 37 L17 23 L3 20 L17 17 Z' fill='%23d8a85a' fill-opacity='.8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmo-nebula"></div>
+    <div class="atmo-stars"></div>
+    <div class="atmo-rings"><i></i><i></i><i></i><i></i></div>
+    <div class="atmo-scan"></div>
+    <div class="atmo-vignette"></div>
+  </div>
+
+  <div class="app">
+    <div id="header"></div>
+    <div id="viewNav"></div>
+    <div id="bootError" style="display:none;margin-top:14px;padding:12px 16px;border:1px solid #ff5f6d;color:#ffd6d9;font-family:monospace;font-size:11px;border-radius:4px;background:rgba(255,95,109,.08)"></div>
+
+    <div id="survivalView">
+    <main class="layout" aria-label="Primary archive interface">
+      <section class="panel" id="archivePanel" aria-label="The Archive inventory"></section>
+      <section class="panel telemetry-panel" id="telemetryPanel" aria-label="Telemetry and lore"></section>
+      <section class="panel matrix-panel" id="matrixPanel" aria-label="Live journey matrix"></section>
+    </main>
+
+    <div class="lower">
+      <section class="panel" id="tunerPanel" aria-label="Expedition tuner"></section>
+      <section class="panel" id="opsPanel" aria-label="Journey operations"></section>
+      <section class="panel" id="resourcesPanel" aria-label="Resources and fabrication"></section>
+      <section class="panel" id="companionsPanel" aria-label="Companion modules"></section>
+      <section class="panel span-2" id="logPanel" aria-label="Expedition log"></section>
+    </div>
+
+    <div id="compareTray"></div>
+    </div>
+
+    <div id="deckView"></div>
+
+    <footer class="footer">
+      <span>The Wayfinder's Archive · Procedural Survival Intelligence Terminal</span>
+      <span class="seed">State persisted locally · <span id="footerSeed"></span></span>
+      <button class="btn sm" data-action="reset-app" style="opacity:.6">Reset Archive</button>
+    </footer>
+  </div>
+
+  <div id="toastHost" class="toast-host" aria-live="polite"></div>
+  <div id="fxHost"></div>
+
+  <script src="js/core/utils.js"></script>
+  <script src="js/core/data.js"></script>
+  <script src="js/core/data-expansion.js"></script>
+  <script src="js/core/profile.js"></script>
+  <script src="js/engine/world-generator.js"></script>
+  <script src="js/engine/route-calculator.js"></script>
+  <script src="js/engine/inventory-manager.js"></script>
+  <script src="js/engine/companion-manager.js"></script>
+  <script src="js/engine/combat-engine.js"></script>
+  <script src="js/engine/tactical-combat.js"></script>
+  <script src="js/engine/quest-engine.js"></script>
+  <script src="js/engine/lore-generator.js"></script>
+  <script src="js/engine/ai-cartographer.js"></script>
+  <script src="js/engine/shared-universe.js"></script>
+  <script src="js/engine/expedition-history.js"></script>
+  <script src="js/engine/expedition-engine.js"></script>
+  <script src="js/core/state.js"></script>
+  <script src="js/ui/sigil.js"></script>
+  <script src="js/ui/render.js"></script>
+  <script src="js/ui/panels.js"></script>
+  <script src="js/ui/deck.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
